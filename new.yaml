@@ -1,4 +1,17 @@
 version: '3'
 services:
   mvn:
-      
+    build: DockerJava
+    volumes:
+      - type: volume
+        source: mydata
+        target: /usr/src/boxfuse/target/
+  web:
+    image: tomcat:9
+    ports: "8080:8080"
+    volumes: 
+      - type: volume
+        source: mydata
+        target: /usr/local/tomcat/webapp
+volumes:
+  mydata: ./mydata
