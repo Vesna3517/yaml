@@ -11,6 +11,6 @@ services:
     ports: 
       - "8080:8080"
     volumes: 
-      - type: volume
+      - type: bind
         source: ./mydata
         target: /usr/local/tomcat/webapps
