@@ -8,7 +8,8 @@ services:
         target: /usr/src/boxfuse/target/
   web:
     image: tomcat:9
-    ports: "8080:8080"
+    ports: 
+      - "8080:8080"
     volumes: 
       - type: volume
         source: mydata
