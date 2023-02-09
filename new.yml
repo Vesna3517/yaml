@@ -13,6 +13,6 @@ services:
     volumes: 
       - type: volume
         source: mydata
-        target: /usr/local/tomcat/webapp
+        target: /usr/local/tomcat/webapps
 volumes:
   mydata: ./mydata
